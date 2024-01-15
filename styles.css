@@ -40,6 +40,10 @@ h2 {
     font-family: monospace;
 }
 
+#textYes{
+    font-size: 40px;
+}
+
 .boton1 {
     height: 50px;
     width: 50px;
