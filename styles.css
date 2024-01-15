@@ -21,7 +21,7 @@ body, html {
 }
 
 
-.rectangulo {
+.card {
     width: 320px;
     height: 480px;
     border: 2px solid black;
