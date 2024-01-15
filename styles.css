@@ -44,7 +44,7 @@ h2 {
     font-size: 40px;
 }
 
-.boton1 {
+.btnYes {
     height: 50px;
     width: 50px;
     background: #ffccdf;
@@ -58,7 +58,7 @@ h2 {
     
 }
 
-.boton2 {
+.btnNot {
     background: #ffccdf;
     width: 50px;
     height: 50px;

@@ -21,8 +21,6 @@ const colors = [
 { front: 'purple', back: 'darkpurple' },
 { front: 'turquoise', back: 'darkturquoise' }];
 
-
-//-----------Functions--------------
 resizeCanvas = () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -57,7 +55,6 @@ initConfetti = () => {
   }
 };
 
-//---------Render-----------
 render = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -102,40 +99,34 @@ render = () => {
   window.requestAnimationFrame(render);
 };
 
-//---------Execution--------
-
-
-//----------Resize----------
 window.addEventListener('resize', function () {
   resizeCanvas();
 });
 
-//------------Click------------
 window.addEventListener('click', function () {
   initConfetti();
 });
 
-var botonsi = document.getElementById('yes');
-var botonno = document.getElementById('not');
-var textDefault = document.getElementById('textDefault');
-var textYes = document.getElementById('textYes');
-
+const btnYes = document.getElementById('yes');
+const btnNot = document.getElementById('not');
+const textDefault = document.getElementById('textDefault');
+const textYes = document.getElementById('textYes');
 const audio = document.querySelector("audio");
-
 const playButton = document.querySelector(".play-button");
+const imagenDefault = document.getElementById('default');
+const imagenYes = document.getElementById('sayYes');
 
 
-function respuestasi() {
+function saysYes() {
     initConfetti();
     render();
-    var imagenDefault = document.getElementById('default');
-    var imagenYes = document.getElementById('sayYes');
+
     audio.play();
     imagenDefault.style.display = 'none';
-    imagenYes.style.display = 'block';
-    botonsi.style.display = 'none';
-    botonno.style.display = 'none';
+    btnYes.style.display = 'none';
+    btnNot.style.display = 'none';
     textDefault.style.display = 'none';
+    imagenYes.style.display = 'block';
     textYes.style.display = 'block';
 
 }
@@ -146,7 +137,7 @@ function mostrarImagen() {
 }
 
 
-function evitar() {
+function avoid() {
     width = 300
     height = 400
 
@@ -158,4 +149,4 @@ function evitar() {
     document.getElementById('not').style.left = newWidth + 'px';
 }
 
-botonsi.addEventListener('click', respuestasi);
+btnYes.addEventListener('click', saysYes);
