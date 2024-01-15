@@ -1,0 +1,90 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(240, 204, 223);
+}
+
+
+.rectangulo {
+    width: 320px;
+    height: 480px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px black;
+    background: url("https://i.pinimg.com/564x/92/db/7c/92db7ce210bff3cbf450f41ee8fd42a8.jpg");
+    text-align: center;
+    border-radius: 2rem;
+    background-size: 100%;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    margin-top: 5%;
+    font-size: 30px;
+    padding: 5px 30px;
+    font-family: monospace;
+}
+
+.boton1 {
+    height: 40px;
+    width: 40px;
+    background: #ffccdf;
+    border: 3px solid black;
+    margin: 0%;
+    margin-top: 8%;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite;
+    
+}
+
+.boton2 {
+    background: #ffccdf;
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+    font-weight: bold;
+    margin-top: 8%;
+    font-size: medium;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite;
+    margin-left: 40px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgb(231, 97, 171);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 3px rgb(231, 97, 171);
+    }
+
+    100% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgb(231, 97, 171);
+    }
+}
+
+img {
+    width: 250px;
+    border-radius: 30%;
+}

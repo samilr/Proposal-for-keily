@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <canvas class="confetti" id="canvas"></canvas>
+        <article class="rectangulo">
+            <h2 id="textDefault">¿PUEDO SER TU NOVIO?</h2>
+            <h2 id="textYes" style="display: none;">¡¡Says Yes!!</h2>
+            <img src="https://www.imagenspng.com.br/wp-content/uploads/2022/04/flork-103-png.png" id="default"><br />
+            <img src="https://media1.tenor.com/m/88Ljaw9lelYAAAAC/skeleton-dance.gif" width="40px" height="260px" id="sayYes" style="display: none; margin-left: 35px;">
+            <input type="button" id='yes' class="boton1" value="SI" />
+            <input class="boton2" type="button" id="not" onmousemove="evitar()" value="NO" />
+        </article>
+    </div>
+    <audio controls loop>
+        <source src="audio.mp3" type="audio/mpeg">
+      </audio>
+      
+
+    <script src="script.js"></script>
+</body>
+
+</html>
