@@ -41,12 +41,12 @@ h2 {
 }
 
 .boton1 {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     background: #ffccdf;
     border: 3px solid black;
     margin: 0%;
-    margin-top: 8%;
+    margin-top: 5%;
     font-size: medium;
     font-weight: bold;
     border-radius: 10px;
@@ -56,11 +56,11 @@ h2 {
 
 .boton2 {
     background: #ffccdf;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border: 3px solid black;
     font-weight: bold;
-    margin-top: 8%;
+    margin-top: 5%;
     font-size: medium;
     border-radius: 10px;
     animation: pulse 1.5s infinite;
