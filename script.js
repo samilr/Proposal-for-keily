@@ -115,15 +115,19 @@ const btnYes = document.getElementById('yes');
 const btnNot = document.getElementById('not');
 const textDefault = document.getElementById('textDefault');
 const textYes = document.getElementById('textYes');
-const audio = document.querySelector("audio");
+const audioYes = document.getElementById("audioYes");
+const audioDefault = document.getElementById("audioDefault");
 const playButton = document.querySelector(".play-button");
 const imagenDefault = document.getElementById('imgDefault');
 const imagenYes = document.getElementById('imgYes');
 
+audioDefault.play();
+
 function saysYes() {
   initConfetti();
   render();
-  audio.play();
+  audioDefault.pause();
+  audioYes.play();
   imagenDefault.style.display = 'none';
   btnYes.style.display = 'none';
   btnNot.style.display = 'none';

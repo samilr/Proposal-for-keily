@@ -40,7 +40,7 @@ body, html {
     font-family: monospace;
     border-radius: 10rem;
     text-shadow: 2px 2px 1px #ffffff;
-    animation: desplazamientoLetras 14s 1 forwards;
+    animation: desplazamientoLetras 20s 1 forwards;
 }
 
 
