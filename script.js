@@ -8,7 +8,7 @@ cx = ctx.canvas.width / 2;
 cy = ctx.canvas.height / 2;
 
 let confetti = [];
-const confettiCount = 300;
+const confettiCount = 600;
 const gravity = 0.5;
 const terminalVelocity = 5;
 const drag = 0.075;
@@ -107,10 +107,6 @@ render = () => {
 
 window.addEventListener('resize', function () {
   resizeCanvas();
-});
-
-window.addEventListener('click', function () {
-  initConfetti();
 });
 
 const audioDefault = document.getElementById("audioDefault");
