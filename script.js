@@ -126,12 +126,8 @@ const imagenYes = document.getElementById('imgYes');
 const div = document.getElementById('startApp');
 const card  = document.getElementById('card');
 
-document.addEventListener('click', function () {
-  if (audioDefault.paused) {
-      audioDefault.play();
-  } else {
-      audioDefault.pause();
-  }
+div.addEventListener('click', function () {
+  audioDefault.play();
   div.style.display = 'none';
   card.style.display = 'block';
 });
@@ -140,9 +136,7 @@ document.addEventListener('click', function () {
 function saysYes() {
   initConfetti();
   render();
-  if (!audioDefault.paused) {
-    audioDefault.pause(); // Pausar el audio aquí
-  }
+  audioDefault.pause();
   audioYes.play();
   imagenDefault.style.display = 'none';
   btnYes.style.display = 'none';
