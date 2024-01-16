@@ -19,7 +19,27 @@ body, html {
     z-index: -1;
     background: #f85f78;
 }
+#startApp {
+    position: fixed; /* Cambiado de relative a fixed para asegurar la superposición */
+    width: 100%;
+    height: 100%;
+    top: 0; /* Ajustado el valor top a 0 */
+    left: 0; /* Ajustado el valor left a 0 */
+    z-index: 999; /* Asegura que esté sobre todo lo demás */
+    background-color: rgb(255, 255, 255); /* Fondo blanco semi-transparente para mayor visibilidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
+#startApp h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 40px; /* Tamaño de fuente ajustado */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333; /* Color de texto ajustado */
+}
 
 .card {
     width: 320px;

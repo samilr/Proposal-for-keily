@@ -112,11 +112,8 @@ window.addEventListener('resize', function () {
 window.addEventListener('click', function () {
   initConfetti();
 });
-const audioDefault = document.getElementById("audioDefault");
-window.onload = function () {
-  audioDefault.play();
-};
 
+const audioDefault = document.getElementById("audioDefault");
 const btnYes = document.getElementById('yes');
 const btnNot = document.getElementById('not');
 const textDefault = document.getElementById('textDefault');
@@ -126,12 +123,26 @@ const audioYes = document.getElementById("audioYes");
 const playButton = document.querySelector(".play-button");
 const imagenDefault = document.getElementById('imgDefault');
 const imagenYes = document.getElementById('imgYes');
+const div = document.getElementById('startApp');
 const card  = document.getElementById('card');
+
+document.addEventListener('click', function () {
+  if (audioDefault.paused) {
+      audioDefault.play();
+  } else {
+      audioDefault.pause();
+  }
+  div.style.display = 'none';
+  card.style.display = 'block';
+});
+
   
 function saysYes() {
   initConfetti();
   render();
-  audioDefault.pause();
+  if (!audioDefault.paused) {
+    audioDefault.pause(); // Pausar el audio aquí
+  }
   audioYes.play();
   imagenDefault.style.display = 'none';
   btnYes.style.display = 'none';
@@ -140,6 +151,7 @@ function saysYes() {
   imagenYes.style.display = 'block';
   textYes.style.display = 'block';
 }
+
 
 function avoid() {
   width = 300
