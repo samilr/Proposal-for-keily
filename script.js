@@ -113,6 +113,10 @@ window.addEventListener('click', function () {
   initConfetti();
 });
 
+window.onload = function () {
+  audioDefault.play();
+};
+
 const btnYes = document.getElementById('yes');
 const btnNot = document.getElementById('not');
 const textDefault = document.getElementById('textDefault');
@@ -123,12 +127,7 @@ const playButton = document.querySelector(".play-button");
 const imagenDefault = document.getElementById('imgDefault');
 const imagenYes = document.getElementById('imgYes');
 const card  = document.getElementById('card');
-
-setTimeout(() => {
-  card.style.display = 'block';
-  audioDefault.play();
-}, 5000);     
-
+  
 function saysYes() {
   initConfetti();
   render();
