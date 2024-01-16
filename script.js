@@ -112,7 +112,7 @@ window.addEventListener('resize', function () {
 window.addEventListener('click', function () {
   initConfetti();
 });
-
+const audioDefault = document.getElementById("audioDefault");
 window.onload = function () {
   audioDefault.play();
 };
@@ -122,7 +122,7 @@ const btnNot = document.getElementById('not');
 const textDefault = document.getElementById('textDefault');
 const textYes = document.getElementById('textYes');
 const audioYes = document.getElementById("audioYes");
-const audioDefault = document.getElementById("audioDefault");
+
 const playButton = document.querySelector(".play-button");
 const imagenDefault = document.getElementById('imgDefault');
 const imagenYes = document.getElementById('imgYes');
