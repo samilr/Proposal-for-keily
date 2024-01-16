@@ -121,7 +121,9 @@ const playButton = document.querySelector(".play-button");
 const imagenDefault = document.getElementById('imgDefault');
 const imagenYes = document.getElementById('imgYes');
 
-audioDefault.play();
+setTimeout(() => {
+  audioDefault.play();
+}, 5000);     
 
 function saysYes() {
   initConfetti();
