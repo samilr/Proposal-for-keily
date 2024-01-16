@@ -1,3 +1,5 @@
+
+
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -120,8 +122,10 @@ const audioDefault = document.getElementById("audioDefault");
 const playButton = document.querySelector(".play-button");
 const imagenDefault = document.getElementById('imgDefault');
 const imagenYes = document.getElementById('imgYes');
+const card  = document.getElementById('card');
 
 setTimeout(() => {
+  card.style.display = 'block';
   audioDefault.play();
 }, 5000);     
 
