@@ -32,15 +32,26 @@ body, html {
     background-size: 100%;
 }
 
-h2 {
-    color: rgb(0, 0, 0);
+#textDefault {
+    color: #000000;
     margin-top: 5%;
     font-size: 30px;
     padding: 5px 30px;
     font-family: monospace;
+    border-radius: 10rem;
+    text-shadow: 2px 2px 1px #ffffff;
+    animation: desplazamientoLetras 14s 1 forwards;
 }
 
+
 #textYes{
+    color: #000000;
+    margin-top: 5%;
+    padding: 5px 30px;
+    font-family: monospace;
+    border-radius: 10rem;
+    text-shadow: 2px 2px 1px #000000;
+    animation: destelloColor 1.5s infinite;
     font-size: 40px;
 }
 
@@ -54,9 +65,10 @@ h2 {
     font-size: medium;
     font-weight: bold;
     border-radius: 10px;
-    animation: pulse 1.5s infinite;
-    
+    animation: pulseWithColor 1.5s infinite; 
+    text-shadow: 2px 2px 1px #ffffff;
 }
+
 
 .btnNot {
     background: #ffccdf;
@@ -67,11 +79,12 @@ h2 {
     margin-top: 5%;
     font-size: medium;
     border-radius: 10px;
-    animation: pulse 1.5s infinite;
+    animation: pulseWithColor 1.5s infinite;
     margin-left: 40px;
+    text-shadow: 2px 2px 1px #ffffff;
 }
 
-@keyframes pulse {
+@keyframes pulseWithColor {
     0% {
         transform: scale(.99);
         box-shadow: 0 0 0 0 rgb(231, 97, 171);
@@ -88,7 +101,57 @@ h2 {
     }
 }
 
-img {
+@keyframes pulse {
+    0% {
+        transform: rotate(-2deg); /* Rotación inicial a la izquierda */
+      }
+      50% {
+        transform: rotate(2deg); /* Rotación a la derecha a la mitad de la animación */
+      }
+      100% {
+        transform: rotate(-2deg); /* Rotación de nuevo a la izquierda al final de la animación */
+      }
+}
+
+#imgYes {
     width: 250px;
     border-radius: 30%;
 }
+
+#imgDefault{
+    animation: pulse 1.5s infinite;
+    width: 250px;
+    
+}
+
+@keyframes destelloColor {
+    0% {
+      color: red;
+    }
+    25% {
+        color: yellow;
+      }
+    50% {
+      color: blue;
+    }
+    75% {
+        color: turquoise;
+      }
+    100% {
+      color: green;
+    }
+  }
+
+  @keyframes desplazamientoLetras {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  

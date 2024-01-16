@@ -1,4 +1,3 @@
-//-----------Var Inits--------------
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -12,14 +11,14 @@ const gravity = 0.5;
 const terminalVelocity = 5;
 const drag = 0.075;
 const colors = [
-{ front: 'red', back: 'darkred' },
-{ front: 'green', back: 'darkgreen' },
-{ front: 'blue', back: 'darkblue' },
-{ front: 'yellow', back: 'darkyellow' },
-{ front: 'orange', back: 'darkorange' },
-{ front: 'pink', back: 'darkpink' },
-{ front: 'purple', back: 'darkpurple' },
-{ front: 'turquoise', back: 'darkturquoise' }];
+  { front: 'red', back: 'darkred' },
+  { front: 'green', back: 'darkgreen' },
+  { front: 'blue', back: 'darkblue' },
+  { front: 'yellow', back: 'darkyellow' },
+  { front: 'orange', back: 'darkorange' },
+  { front: 'pink', back: 'darkpink' },
+  { front: 'purple', back: 'darkpurple' },
+  { front: 'turquoise', back: 'darkturquoise' }];
 
 resizeCanvas = () => {
   canvas.width = window.innerWidth;
@@ -36,20 +35,25 @@ initConfetti = () => {
       color: colors[Math.floor(randomRange(0, colors.length))],
       dimensions: {
         x: randomRange(10, 20),
-        y: randomRange(10, 30) },
+        y: randomRange(10, 30)
+      },
 
       position: {
         x: randomRange(0, canvas.width),
-        y: canvas.height - 1 },
+        y: canvas.height - 1
+      },
 
       rotation: randomRange(0, 2 * Math.PI),
       scale: {
         x: 1,
-        y: 1 },
+        y: 1
+      },
 
       velocity: {
         x: randomRange(-25, 25),
-        y: randomRange(0, -50) } });
+        y: randomRange(0, -50)
+      }
+    });
 
 
   }
@@ -113,40 +117,31 @@ const textDefault = document.getElementById('textDefault');
 const textYes = document.getElementById('textYes');
 const audio = document.querySelector("audio");
 const playButton = document.querySelector(".play-button");
-const imagenDefault = document.getElementById('default');
-const imagenYes = document.getElementById('sayYes');
-
+const imagenDefault = document.getElementById('imgDefault');
+const imagenYes = document.getElementById('imgYes');
 
 function saysYes() {
-    initConfetti();
-    render();
-
-    audio.play();
-    imagenDefault.style.display = 'none';
-    btnYes.style.display = 'none';
-    btnNot.style.display = 'none';
-    textDefault.style.display = 'none';
-    imagenYes.style.display = 'block';
-    textYes.style.display = 'block';
-
+  initConfetti();
+  render();
+  audio.play();
+  imagenDefault.style.display = 'none';
+  btnYes.style.display = 'none';
+  btnNot.style.display = 'none';
+  textDefault.style.display = 'none';
+  imagenYes.style.display = 'block';
+  textYes.style.display = 'block';
 }
-
-function mostrarImagen() {
-    var imagen = document.getElementById('sayYes');
-    imagen.style.display = 'block';
-}
-
 
 function avoid() {
-    width = 300
-    height = 400
+  width = 300
+  height = 400
 
-    newWidth = (Math.random() * width);
-    newHeight = (Math.random() * height);
+  newWidth = (Math.random() * width);
+  newHeight = (Math.random() * height);
 
-    document.getElementById('not').style.position = 'absolute';
-    document.getElementById('not').style.top = newHeight + 'px';
-    document.getElementById('not').style.left = newWidth + 'px';
+  document.getElementById('not').style.position = 'absolute';
+  document.getElementById('not').style.top = newHeight + 'px';
+  document.getElementById('not').style.left = newWidth + 'px';
 }
 
 btnYes.addEventListener('click', saysYes);
