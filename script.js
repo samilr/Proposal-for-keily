@@ -4,7 +4,7 @@
 function startEmojiRain(){
 
   // Definimos un limite de hasta 100 emojis en pantalla
-const COUNT = 200;
+const COUNT = 300;
 
 // Definimos tamaños de emojis que se seleccionaran aleatorios en un arreglo
 const SIZES = [
@@ -37,7 +37,9 @@ const EMOJI = [
     '😍',
     '😘',
     '🥰',
-    '💝'
+    '💝',
+    '💘',
+    '💞'
 ];
   // Seleccionamos nuestro contenedor
 const rainContainer = document.querySelector('.rain-container');

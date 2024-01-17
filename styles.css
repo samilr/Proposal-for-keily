@@ -193,6 +193,7 @@ body, html {
 	inset: 0;
     /* esto nos permitira cortar los elementos que se salen del contenedor */
 	overflow: hidden;
+  z-index: 0;
 }
 .rainDrop {
     font-size: var(--sz);
