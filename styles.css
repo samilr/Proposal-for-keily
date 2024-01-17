@@ -17,7 +17,7 @@ body, html {
     top: 0;
     left: 0;
     z-index: -1;
-    background: #f85f78;
+    background: #000000;
 }
 #startApp {
     position: fixed; /* Cambiado de relative a fixed para asegurar la superposición */
@@ -42,15 +42,17 @@ body, html {
 }
 
 .card {
-    width: 320px;
-    height: 480px;
-    border: 2px solid black;
-    box-shadow: 5px 5px 10px black;
-    background: url("https://i.pinimg.com/564x/92/db/7c/92db7ce210bff3cbf450f41ee8fd42a8.jpg");
-    text-align: center;
-    border-radius: 2rem;
-    background-size: 100%;
+  width: 320px;
+  height: 480px;
+  border: 2px solid black;
+  animation: pulseWithColor 1.5s infinite; 
+  box-shadow: 0 0 10px rgb(238, 89, 158); /* Modificado para que la sombra se extienda en todas las direcciones */
+  background: url("https://i.pinimg.com/564x/92/db/7c/92db7ce210bff3cbf450f41ee8fd42a8.jpg");
+  text-align: center;
+  border-radius: 2rem;
+  background-size: 100%;
 }
+
 
 #textDefault {
     color: #000000;
@@ -173,5 +175,79 @@ body, html {
     }
   }
   
+  /* Los keyframes nos sirve para dar un nombre y definir los fotogramas clave  */
+@keyframes flake {
+	0% {
+        /* Inicio de la animación */
+		transform: translate(var(--x-start), var(--y-start)) rotate(0);
+	}
+	100% {
+        /* Fin de la animación */
+		transform: translate(var(--x-end), var(--y-end)) rotate(50deg);
+	}
+}
+.rain-container {
+	position: absolute;
+    /* esto definira las compensaciones de inicio y final */
+	inset: 0;
+    /* esto nos permitira cortar los elementos que se salen del contenedor */
+	overflow: hidden;
+}
+.rainDrop {
+    font-size: var(--sz);
+	filter: blur(var(--blur));
+	animation: flake 20s linear infinite;
+	transform: translate(var(--x-start), -15vh) rotate(0);
+	opacity: var(--a);
+}
+
+.rainDrop--s {
+	--sz: 1rem;
+	--blur: 2px;
+	--a: 0.8;
+	--x-start: 50vw;
+	--x-end: 0;
+	--y-start: 0;
+	--y-end: 100vh;
+	position: absolute;    
+}
+
+.rainDrop--m {
+	--sz: 2rem;
+	--blur: 2px;
+	--a: 0.8;
+	--x-start: 50vw;
+	--x-end: 0;
+	--y-start: 0;
+	--y-end: 100vh;
+	position: absolute;
+	filter: blur(0px);
+	z-index: 50;
+}
+
+.rainDrop--l {
+	--sz: 3rem;
+	--blur: 0px;
+	--a: 0.8;
+	--x-start: 50vw;
+	--x-end: 0;
+	--y-start: 0;
+	--y-end: 100vh;
+	position: absolute;
+	z-index: 80;
+}
+
+.rainDrop--xl {
+	--sz: 6rem;
+	--blur: 4px;
+	--a: 0.5;
+	--x-start: 50vw;
+	--x-end: 0;
+	--y-start: 0;
+	--y-end: 100vh;
+	position: absolute; 
+	z-index: 100;
+}
+
   
   
