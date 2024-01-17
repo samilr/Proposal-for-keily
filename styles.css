@@ -18,6 +18,7 @@ body, html {
     left: 0;
     z-index: -1;
     background: #000000;
+    background: url("https://img.freepik.com/vector-premium/confeti-amor-corazon-blanco-dia-san-valentin-lluvia-que-cae-fondo-creativo-caida-confeti-corazones-papel-cosido-sobre-fondo-rosa-ilustracion-vector-fresco_174187-7346.jpg");
 }
 #startApp {
     position: fixed; /* Cambiado de relative a fixed para asegurar la superposición */
