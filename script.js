@@ -85,8 +85,6 @@ function getRamdomArbitrary(min,max) {
     return Math.random() * (max - min) + min;
 }
 
-
-
 // Lluvia de confetti
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");

@@ -63,7 +63,7 @@ body, html {
     font-family: monospace;
     border-radius: 10rem;
     text-shadow: 2px 2px 1px #ffffff;
-    animation: desplazamientoLetras 20s 1 forwards;
+    animation: desplazamientoLetras 30s 1 forwards;
 }
 
 
@@ -88,7 +88,7 @@ body, html {
     font-size: medium;
     font-weight: bold;
     border-radius: 10px;
-    animation: pulseWithColor 1.5s infinite; 
+    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s infinite;
     text-shadow: 2px 2px 1px #ffffff;
 }
 
@@ -103,7 +103,7 @@ body, html {
     margin-top: 5%;
     font-size: medium;
     border-radius: 10px;
-    animation: pulseWithColor 1.5s infinite;
+    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s infinite;
     margin-left: 40px;
     text-shadow: 2px 2px 1px #ffffff;
 }
@@ -163,6 +163,15 @@ body, html {
       }
     100% {
       color: green;
+    }
+  }
+
+  @keyframes mostrarLetras {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 
