@@ -46,6 +46,17 @@ body, html {
   color: #333;
 }
 
+/* Agrega estilos para el pie de página dentro de startApp */
+#startApp p {
+  position: absolute;
+  bottom: 5px; /* Ajusta la distancia desde la parte inferior según tus necesidades */
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #333; /* Color de texto ajustado */
+  font-family: 'Arial', sans-serif; /* Ajusta la fuente según tus preferencias */
+}
+
 /* Tarjeta */
 .card {
   width: 320px;
