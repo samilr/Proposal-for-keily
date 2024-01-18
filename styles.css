@@ -93,6 +93,7 @@ body, html {
 }
 
 
+
 .btnNot {
     background: #ffccdf;
     width: 50px;
@@ -188,14 +189,14 @@ body, html {
 	}
 }
 .rain-container {
-	position: absolute;
-    /* esto definira las compensaciones de inicio y final */
-	inset: 0;
-    /* esto nos permitira cortar los elementos que se salen del contenedor */
-	overflow: hidden;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
   z-index: 0;
   height: 100vh;
+  pointer-events: none; /* Esta línea evita que el contenedor capture eventos del ratón */
 }
+
 .rainDrop {
     font-size: var(--sz);
 	filter: blur(var(--blur));

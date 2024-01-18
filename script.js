@@ -4,21 +4,21 @@
 function startEmojiRain(){
 
   // Definimos un limite de hasta 100 emojis en pantalla
-const COUNT = 300;
+const COUNT = 100;
 
 // Definimos tamaños de emojis que se seleccionaran aleatorios en un arreglo
 const SIZES = [
-  'rainDrop--s',
-	'rainDrop--s',
-	'rainDrop--s',
-	'rainDrop--s',
+  'rainDrop--m',
 	'rainDrop--m',
 	'rainDrop--m',
 	'rainDrop--m',
 	'rainDrop--m',
 	'rainDrop--m',
-	'rainDrop--l',
-	'rainDrop--xl'
+	'rainDrop--m',
+	'rainDrop--m',
+	'rainDrop--m',
+	'rainDrop--m',
+	'rainDrop--m'
 ];
 
 // Creamos un lista de los emojis que podrian salir en pantallla en un arreglo
