@@ -88,7 +88,7 @@ body, html {
     font-size: medium;
     font-weight: bold;
     border-radius: 10px;
-    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s infinite;
+    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s forwards;
     text-shadow: 2px 2px 1px #ffffff;
 }
 
@@ -103,7 +103,7 @@ body, html {
     margin-top: 5%;
     font-size: medium;
     border-radius: 10px;
-    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s infinite;
+    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s forwards;
     margin-left: 40px;
     text-shadow: 2px 2px 1px #ffffff;
 }
