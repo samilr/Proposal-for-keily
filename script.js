@@ -1,50 +1,11 @@
-//Lluvia de emojis
+// Lluvia de emojis
+function startEmojiRain() {
+  const COUNT = 100;
+  const SIZES = Array(11).fill('rainDrop--m');
+  const EMOJI = ['❤️', '😁', '💕', '💖', '😄', '😅', '❤️‍🔥', '😘', '😊', '😎', '😍', '😘', '🥰', '💝', '💘', '💞'];
+  const rainContainer = document.querySelector('.rain-container');
 
-
-function startEmojiRain(){
-
-  // Definimos un limite de hasta 100 emojis en pantalla
-const COUNT = 100;
-
-// Definimos tamaños de emojis que se seleccionaran aleatorios en un arreglo
-const SIZES = [
-  'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m',
-	'rainDrop--m'
-];
-
-// Creamos un lista de los emojis que podrian salir en pantallla en un arreglo
-const EMOJI = [
-    '❤️',
-    '😁',
-    '💕',
-    '💖',
-    '😄',
-    '😅',
-    '❤️‍🔥',
-    '😘',
-    '😊',
-    '😎',
-    '😍',
-    '😘',
-    '🥰',
-    '💝',
-    '💘',
-    '💞'
-];
-  // Seleccionamos nuestro contenedor
-const rainContainer = document.querySelector('.rain-container');
-// Generamos nuevas gotas de emoji
-const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
-    // Creamos los nuevos elementos contenedores de nuestros emojis
+  const genRainDrop = (size, xStart, xEnd, yStart, emoji) => {
     const r = document.createElement('div');
     r.innerText = emoji;
     r.classList.add('rainDrop', size);
@@ -52,46 +13,29 @@ const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
     r.style.setProperty('--x-end', xEnd + 'vw');
     r.style.setProperty('--y-start', yStart + 'vh');
     r.style.setProperty('--y-end', yStart + 200 + 'vh');
-
     return r;
-}
+  };
 
-//Creamos un ciclo para recorrer todos nuestros elementos
-for(let i=0; i<COUNT; i++){
-    // declaramos size y creamos la funcion para hacer el random de nuestros SIZES
+  const randFromList = items => items[Math.floor(Math.random() * items.length)];
+  const getRamdomArbitrary = (min, max) => Math.random() * (max - min) + min;
+
+  for (let i = 0; i < COUNT; i++) {
     const size = randFromList(SIZES);
-    // para buscar un randon en el inicio del eje X
-    const xStart = getRamdomArbitrary(0,100);    
-    // para buscar un randon en el fin del eje X
+    const xStart = getRamdomArbitrary(0, 100);
     const xEnd = getRamdomArbitrary(xStart - 20, xStart + 20);
-    // ahora vamos a crear un rando para nuestros emojis usamos la funcion de SIZE
     const emoji = randFromList(EMOJI);
-    // agregamos un ramdon para nuestro eje y
-    const yStart = getRamdomArbitrary(-100,0);
-    // llamamos a nuestro contenedor y le agregamos nuestros nuevos elementos
+    const yStart = getRamdomArbitrary(-100, 0);
     rainContainer.appendChild(genRainDrop(size, xStart, xEnd, yStart, emoji));
-
-}
-}
-
-// 1 función para hacer el randon de la lista de tamaños SIZES
-function randFromList(items){
-    // math.floor nos devolvera un numero entero de lo que saldra del math.ramdom
-    return items[Math.floor(Math.random()*items.length)];
-}
-
-// función para el random
-function getRamdomArbitrary(min,max) {
-    return Math.random() * (max - min) + min;
+  }
 }
 
 // Lluvia de confetti
-canvas = document.getElementById("canvas");
-ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-cx = ctx.canvas.width / 2;
-cy = ctx.canvas.height / 2;
+let cx = ctx.canvas.width / 2;
+let cy = ctx.canvas.height / 2;
 
 let confetti = [];
 const confettiCount = 600;
@@ -106,48 +50,32 @@ const colors = [
   { front: 'orange', back: 'darkorange' },
   { front: 'pink', back: 'darkpink' },
   { front: 'purple', back: 'darkpurple' },
-  { front: 'turquoise', back: 'darkturquoise' }];
+  { front: 'turquoise', back: 'darkturquoise' }
+];
 
-resizeCanvas = () => {
+const resizeCanvas = () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   cx = ctx.canvas.width / 2;
   cy = ctx.canvas.height / 2;
 };
 
-randomRange = (min, max) => Math.random() * (max - min) + min;
+const randomRange = (min, max) => Math.random() * (max - min) + min;
 
-initConfetti = () => {
-  for (let i = 0; i < confettiCount; i++) {
-    confetti.push({
+const initConfetti = () => {
+  confetti = Array.from({ length: confettiCount }, () => {
+    return {
       color: colors[Math.floor(randomRange(0, colors.length))],
-      dimensions: {
-        x: randomRange(10, 20),
-        y: randomRange(10, 30)
-      },
-
-      position: {
-        x: randomRange(0, canvas.width),
-        y: canvas.height - 1
-      },
-
+      dimensions: { x: randomRange(10, 20), y: randomRange(10, 30) },
+      position: { x: randomRange(0, canvas.width), y: canvas.height - 1 },
       rotation: randomRange(0, 2 * Math.PI),
-      scale: {
-        x: 1,
-        y: 1
-      },
-
-      velocity: {
-        x: randomRange(-25, 25),
-        y: randomRange(0, -50)
-      }
-    });
-
-
-  }
+      scale: { x: 1, y: 1 },
+      velocity: { x: randomRange(-25, 25), y: randomRange(0, -50) }
+    };
+  });
 };
 
-render = () => {
+const render = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   confetti.forEach((confetto, index) => {
@@ -185,15 +113,12 @@ render = () => {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
   });
 
-  // Fire off another round of confetti
   if (confetti.length <= 10) initConfetti();
 
   window.requestAnimationFrame(render);
 };
 
-window.addEventListener('resize', function () {
-  resizeCanvas();
-});
+window.addEventListener('resize', resizeCanvas);
 
 const audioDefault = document.getElementById("audioDefault");
 const btnYes = document.getElementById('yes');
@@ -214,7 +139,7 @@ div.addEventListener('click', function () {
   card.style.display = 'block';
 });
 
-  
+
 function saysYes() {
   initConfetti();
   render();
@@ -229,14 +154,11 @@ function saysYes() {
   textYes.style.display = 'block';
 }
 
-
 function avoid() {
-  width = 300
-  height = 400
-
+  width = 300;
+  height = 400;
   newWidth = (Math.random() * width);
   newHeight = (Math.random() * height);
-
   document.getElementById('not').style.position = 'absolute';
   document.getElementById('not').style.top = newHeight + 'px';
   document.getElementById('not').style.left = newWidth + 'px';

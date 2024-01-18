@@ -1,266 +1,282 @@
+/* Reset de márgenes y rellenos */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
+/* Contenedor principal */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
+/* Fondo de confeti */
 .confetti {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: #000000;
-    background: url("https://img.freepik.com/vector-premium/confeti-amor-corazon-blanco-dia-san-valentin-lluvia-que-cae-fondo-creativo-caida-confeti-corazones-papel-cosido-sobre-fondo-rosa-ilustracion-vector-fresco_174187-7346.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #000000;
+  background: url("https://img.freepik.com/vector-premium/confeti-amor-corazon-blanco-dia-san-valentin-lluvia-que-cae-fondo-creativo-caida-confeti-corazones-papel-cosido-sobre-fondo-rosa-ilustracion-vector-fresco_174187-7346.jpg");
 }
+
+/* Página de inicio */
 #startApp {
-    position: fixed; /* Cambiado de relative a fixed para asegurar la superposición */
-    width: 100%;
-    height: 100%;
-    top: 0; /* Ajustado el valor top a 0 */
-    left: 0; /* Ajustado el valor left a 0 */
-    z-index: 999; /* Asegura que esté sobre todo lo demás */
-    background-color: rgb(255, 255, 255); /* Fondo blanco semi-transparente para mayor visibilidad */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.912);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 #startApp h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 40px; /* Tamaño de fuente ajustado */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #333; /* Color de texto ajustado */
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #333;
 }
 
+/* Tarjeta */
 .card {
   width: 320px;
   height: 480px;
   border: 2px solid black;
-  animation: pulseWithColor 1.5s infinite; 
-  box-shadow: 0 0 10px rgb(238, 89, 158); /* Modificado para que la sombra se extienda en todas las direcciones */
+  animation: pulseWithColor 1.5s infinite;
+  box-shadow: 0 0 10px rgb(238, 89, 158);
   background: url("https://i.pinimg.com/564x/92/db/7c/92db7ce210bff3cbf450f41ee8fd42a8.jpg");
   text-align: center;
   border-radius: 2rem;
   background-size: 100%;
 }
 
-
+/* Texto predeterminado */
 #textDefault {
-    color: #000000;
-    margin-top: 5%;
-    font-size: 30px;
-    padding: 5px 30px;
-    font-family: monospace;
-    border-radius: 10rem;
-    text-shadow: 2px 2px 1px #ffffff;
-    animation: desplazamientoLetras 30s 1 forwards;
+  color: #000000;
+  margin-top: 5%;
+  font-size: 30px;
+  padding: 5px 30px;
+  font-family: monospace;
+  border-radius: 10rem;
+  text-shadow: 2px 2px 1px #ffffff;
+  animation: desplazamientoLetras 30s 1 forwards;
 }
 
-
-#textYes{
-    color: #000000;
-    margin-top: 5%;
-    padding: 5px 30px;
-    font-family: monospace;
-    border-radius: 10rem;
-    text-shadow: 2px 2px 1px #000000;
-    animation: destelloColor 1.5s infinite;
-    font-size: 40px;
+/* Texto de confirmación */
+#textYes {
+  color: #000000;
+  margin-top: 5%;
+  padding: 5px 30px;
+  font-family: monospace;
+  border-radius: 10rem;
+  text-shadow: 2px 2px 1px #000000;
+  animation: destelloColor 1.5s infinite;
+  font-size: 40px;
 }
 
+/* Botón de sí */
 .btnYes {
-    height: 50px;
-    width: 50px;
-    background: #ffccdf;
-    border: 3px solid black;
-    margin: 0%;
-    margin-top: 5%;
-    font-size: medium;
-    font-weight: bold;
-    border-radius: 10px;
-    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s forwards;
-    text-shadow: 2px 2px 1px #ffffff;
+  height: 50px;
+  width: 50px;
+  background: #ffccdf;
+  border: 3px solid black;
+  margin: 0%;
+  margin-top: 5%;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 10px;
+  animation: pulseWithColor 1.5s infinite, mostrarLetras 30s forwards;
+  text-shadow: 2px 2px 1px #ffffff;
 }
 
-
-
+/* Botón de no */
 .btnNot {
-    background: #ffccdf;
-    width: 50px;
-    height: 50px;
-    border: 3px solid black;
-    font-weight: bold;
-    margin-top: 5%;
-    font-size: medium;
-    border-radius: 10px;
-    animation: pulseWithColor 1.5s infinite, mostrarLetras 30s forwards;
-    margin-left: 40px;
-    text-shadow: 2px 2px 1px #ffffff;
+  background: #ffccdf;
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  font-weight: bold;
+  margin-top: 5%;
+  font-size: medium;
+  border-radius: 10px;
+  animation: pulseWithColor 1.5s infinite, mostrarLetras 30s forwards;
+  margin-left: 40px;
+  text-shadow: 2px 2px 1px #ffffff;
 }
 
+/* Animación de pulso con color */
 @keyframes pulseWithColor {
-    0% {
-        transform: scale(.99);
-        box-shadow: 0 0 0 0 rgb(231, 97, 171);
-    }
+  0% {
+      transform: scale(.99);
+      box-shadow: 0 0 0 0 rgb(231, 97, 171);
+  }
 
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 3px rgb(231, 97, 171);
-    }
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 3px rgb(231, 97, 171);
+  }
 
-    100% {
-        transform: scale(.99);
-        box-shadow: 0 0 0 0 rgb(231, 97, 171);
-    }
+  100% {
+      transform: scale(.99);
+      box-shadow: 0 0 0 0 rgb(231, 97, 171);
+  }
 }
 
-@keyframes pulse {
-    0% {
-        transform: rotate(-2deg); /* Rotación inicial a la izquierda */
-      }
-      50% {
-        transform: rotate(2deg); /* Rotación a la derecha a la mitad de la animación */
-      }
-      100% {
-        transform: rotate(-2deg); /* Rotación de nuevo a la izquierda al final de la animación */
-      }
+/* Imágenes predeterminada y de confirmación */
+#imgYes,
+#imgDefault {
+  width: 250px;
+  border-radius: 30%;
 }
 
-#imgYes {
-    width: 250px;
-    border-radius: 30%;
+#imgDefault {
+  animation: pulse 1.5s infinite;
 }
 
-#imgDefault{
-    animation: pulse 1.5s infinite;
-    width: 250px;
-    
-}
-
+/* Animación de destello de color */
 @keyframes destelloColor {
-    0% {
+  0% {
       color: red;
-    }
-    25% {
-        color: yellow;
-      }
-    50% {
+  }
+
+  25% {
+      color: yellow;
+  }
+
+  50% {
       color: blue;
-    }
-    75% {
-        color: turquoise;
-      }
-    100% {
+  }
+
+  75% {
+      color: turquoise;
+  }
+
+  100% {
       color: green;
-    }
   }
+}
 
-  @keyframes mostrarLetras {
-    from {
+/* Animación de mostrar letras */
+@keyframes mostrarLetras {
+  from {
       opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
 
-  @keyframes desplazamientoLetras {
-    from {
+  to {
+      opacity: 1;
+  }
+}
+
+/* Animación de desplazamiento de letras */
+@keyframes desplazamientoLetras {
+  from {
       opacity: 0;
       transform: translateY(30px);
-    }
-    to {
+  }
+
+  to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
-  /* Los keyframes nos sirve para dar un nombre y definir los fotogramas clave  */
-@keyframes flake {
-	0% {
-        /* Inicio de la animación */
-		transform: translate(var(--x-start), var(--y-start)) rotate(0);
-	}
-	100% {
-        /* Fin de la animación */
-		transform: translate(var(--x-end), var(--y-end)) rotate(50deg);
-	}
 }
+
+/* Animación de girar */
+@keyframes pulse {
+  0% {
+      transform: rotate(-2deg);
+  }
+
+  50% {
+      transform: rotate(2deg);
+  }
+
+  100% {
+      transform: rotate(-2deg);
+  }
+}
+
+/* Lluvia de emojis */
+@keyframes flake {
+  0% {
+      transform: translate(var(--x-start), var(--y-start)) rotate(0);
+  }
+
+  100% {
+      transform: translate(var(--x-end), var(--y-end)) rotate(50deg);
+  }
+}
+
 .rain-container {
   position: absolute;
   inset: 0;
   overflow: hidden;
   z-index: 0;
   height: 100vh;
-  pointer-events: none; /* Esta línea evita que el contenedor capture eventos del ratón */
+  pointer-events: none;
 }
 
 .rainDrop {
-    font-size: var(--sz);
-	filter: blur(var(--blur));
-	animation: flake 20s linear infinite;
-	transform: translate(var(--x-start), -15vh) rotate(0);
-	opacity: var(--a);
+  font-size: var(--sz);
+  filter: blur(var(--blur));
+  animation: flake 20s linear infinite;
+  transform: translate(var(--x-start), -15vh) rotate(0);
+  opacity: var(--a);
 }
 
+/* Clases de tamaño para gotas de lluvia */
 .rainDrop--s {
-	--sz: 1rem;
-	--blur: 2px;
-	--a: 0.8;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute;    
+  --sz: 1rem;
+  --blur: 2px;
+  --a: 0.8;
+  --x-start: 50vw;
+  --x-end: 0;
+  --y-start: 0;
+  --y-end: 100vh;
+  position: absolute;
 }
 
 .rainDrop--m {
-	--sz: 2rem;
-	--blur: 2px;
-	--a: 0.8;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute;
-	filter: blur(0px);
-	z-index: 50;
+  --sz: 2rem;
+  --blur: 2px;
+  --a: 0.8;
+  --x-start: 50vw;
+  --x-end: 0;
+  --y-start: 0;
+  --y-end: 100vh;
+  position: absolute;
+  filter: blur(0px);
+  z-index: 50;
 }
 
 .rainDrop--l {
-	--sz: 3rem;
-	--blur: 0px;
-	--a: 0.8;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute;
-	z-index: 80;
+  --sz: 3rem;
+  --blur: 0px;
+  --a: 0.8;
+  --x-start: 50vw;
+  --x-end: 0;
+  --y-start: 0;
+  --y-end: 100vh;
+  position: absolute;
+  z-index: 80;
 }
 
 .rainDrop--xl {
-	--sz: 6rem;
-	--blur: 4px;
-	--a: 0.5;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute; 
-	z-index: 100;
+  --sz: 6rem;
+  --blur: 4px;
+  --a: 0.5;
+  --x-start: 50vw;
+  --x-end: 0;
+  --y-start: 0;
+  --y-end: 100vh;
+  position: absolute;
+  z-index: 100;
 }
-
-  
-  
