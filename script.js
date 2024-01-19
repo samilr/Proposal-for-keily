@@ -139,8 +139,7 @@ div.addEventListener('click', function () {
   card.style.display = 'block';
 });
 
-
-function saysYes() {
+btnYes.addEventListener('click', function () {
   initConfetti();
   render();
   audioDefault.pause();
@@ -152,7 +151,7 @@ function saysYes() {
   textDefault.style.display = 'none';
   imagenYes.style.display = 'block';
   textYes.style.display = 'block';
-}
+});
 
 function avoid() {
   width = 300;
@@ -163,5 +162,3 @@ function avoid() {
   document.getElementById('not').style.top = newHeight + 'px';
   document.getElementById('not').style.left = newWidth + 'px';
 }
-
-btnYes.addEventListener('click', saysYes);
