@@ -133,13 +133,13 @@ const imagenYes = document.getElementById('imgYes');
 const div = document.getElementById('startApp');
 const card  = document.getElementById('card');
 
-div.addEventListener('click', function () {
+div.addEventListener('click', () => {
   audioDefault.play();
   div.style.display = 'none';
   card.style.display = 'block';
 });
 
-btnYes.addEventListener('click', function () {
+btnYes.addEventListener('click', () => {
   initConfetti();
   render();
   audioDefault.pause();
