@@ -71,23 +71,11 @@ body, html {
   background-size: 100%;
 }
 
-@keyframes appearAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Texto predeterminado */
 #textDefault {
   color: #000000;
   margin-top: 5%;
   font-size: 30px;
-  padding: 5px 30px;
   font-family: monospace;
   border-radius: 10rem;
   text-shadow: 2px 2px 1px #ffffff;
@@ -138,6 +126,28 @@ body, html {
   text-shadow: 1px 1px 1px #ffccdf;
 }
 
+/* Imágenes predeterminada y de confirmación */
+#imgYes{
+  width: 250px;
+  border-radius: 30%;
+}
+
+#imgDefault {
+  width: 310px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes appearAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Animación de pulso con color */
 @keyframes pulseWithColor {
   0% {
@@ -154,17 +164,6 @@ body, html {
       transform: scale(.99);
       box-shadow: 0 0 0 0 rgb(231, 97, 171);
   }
-}
-
-/* Imágenes predeterminada y de confirmación */
-#imgYes,
-#imgDefault {
-  width: 250px;
-  border-radius: 30%;
-}
-
-#imgDefault {
-  animation: pulse 1.5s infinite;
 }
 
 /* Animación de destello de color */
